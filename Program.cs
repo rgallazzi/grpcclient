@@ -15,6 +15,6 @@ try {
 }
 catch (Exception ex)
 {
-    Console.WriteLine(ex.Message + " " + ex.StackTrace);
+    Console.WriteLine(ex.Message + " " + ex.StackTrace + "////" + ex.InnerException);
 }
         
