@@ -2,7 +2,7 @@
 using Grpc.Net.Client;
 using GrpcGreeterClient;
 
-
+try { 
             using var channel = GrpcChannel.ForAddress("https://grpcserver.grpc.appserviceenvironment.net");
 
             var client = new Greeter.GreeterClient(channel);
@@ -11,4 +11,10 @@ using GrpcGreeterClient;
             Console.WriteLine("Greeting: " + reply.Message);
             Console.WriteLine("Press any key to exit...");
             Console.ReadKey();
+
+}
+catch (Exception ex)
+{
+    Console.WriteLine(ex.Message + " " + ex.StackTrace);
+}
         
