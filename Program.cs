@@ -3,7 +3,7 @@ using Grpc.Net.Client;
 using GrpcGreeterClient;
 
 try { 
-            using var channel = GrpcChannel.ForAddress("https://grpcserver.grpc.appserviceenvironment.net");
+            using var channel = GrpcChannel.ForAddress("https://linuxgrpcserver.grpc.appserviceenvironment.net");
 
             var client = new Greeter.GreeterClient(channel);
             var reply = await client.SayHelloAsync(
